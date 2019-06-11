@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<script>
+
+function testImage(URL) {
+    var tester=new Image();
+    tester.onload=imageFound;
+    tester.onerror=imageNotFound;
+    tester.src=URL;
+}
+
+function imageFound() {
+    alert('That image is found and loaded');
+}
+
+function imageNotFound() {
+    alert('That image was not found.');
+}
+
+//testImage("http://vikas.com/bar.jpg");
+</script>
+<body>
+
+<h2>Image Loaded or Not</h2>
+
+<button type="button"
+onclick="testImage('http://vikas.com/bar.jpg')">Check Image</button>
+
+</body>
+</html> 
